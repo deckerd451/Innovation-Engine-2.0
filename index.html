@@ -12,6 +12,9 @@
   <script crossorigin src="https://esm.sh/react@18"></script>
   <script crossorigin src="https://esm.sh/react-dom@18"></script>
 
+  <!-- Supabase SDK (Required for auth + DB) -->
+  <script src="https://esm.sh/@supabase/supabase-js@2"></script>
+
   <!-- Babel for JSX -->
   <script src="https://esm.sh/@babel/standalone"></script>
 </head>
@@ -19,7 +22,7 @@
 <body class="bg-brand-light">
   <div id="root"></div>
 
-  <!-- Entire app in one file -->
-  <script type="text/babel" src="/app.bundle.js"></script>
+  <!-- Entire application in one file -->
+  <script type="text/babel" src="app.bundle.js"></script>
 </body>
 </html>
