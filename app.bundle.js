@@ -528,26 +528,16 @@ window.App = function App() {
           supabaseService={supabaseService}
         />
       );
-
     default:
       return <div>Unknown</div>;
   }
 };
 
 /*******************************************
- * 11. ENTRYPOINT (converted main.js)
- *******************************************/
-document.addEventListener("DOMContentLoaded", () => {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
- /*******************************************
  * 11. ENTRYPOINT (fixed for UMD + Babel)
  *******************************************/
 document.addEventListener("DOMContentLoaded", () => {
   const rootEl = document.getElementById("root");
   const root = ReactDOM.createRoot(rootEl);
-
-  root.render(
-    React.createElement(App, {})
-  );
+  root.render(React.createElement(App));
 });
-
