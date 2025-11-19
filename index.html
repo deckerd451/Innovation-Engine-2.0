@@ -8,23 +8,41 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- React 18 UMD -->
+  <!-- Tailwind Custom Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-light': '#f5f7fa',
+            'brand-dark': '#1e293b',
+            'brand-primary': '#4f46e5',
+            'brand-secondary': '#64748b',
+            'brand-accent': '#22d3ee'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-  <!-- Supabase JS UMD -->
+  <!-- Supabase JS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
-  <!-- Babel for JSX -->
+  <!-- Babel -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body { background: #f5f7fa; }
+  </style>
 </head>
 
-<body class="bg-brand-light">
-
+<body>
   <div id="root"></div>
 
-  <!-- Entire app -->
   <script type="text/babel" src="app.bundle.js"></script>
-
 </body>
 </html>
