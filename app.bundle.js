@@ -539,5 +539,15 @@ window.App = function App() {
  *******************************************/
 document.addEventListener("DOMContentLoaded", () => {
   const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(<App />);
+ /*******************************************
+ * 11. ENTRYPOINT (fixed for UMD + Babel)
+ *******************************************/
+document.addEventListener("DOMContentLoaded", () => {
+  const rootEl = document.getElementById("root");
+  const root = ReactDOM.createRoot(rootEl);
+
+  root.render(
+    React.createElement(App, {})
+  );
 });
+
